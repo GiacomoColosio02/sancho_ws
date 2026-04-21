@@ -15,7 +15,7 @@ setup(
     zip_safe=True,
     maintainer='giacomo',
     maintainer_email='colosio.giacomo.2002@gmail.com',
-    description='TODO: Package description',
+    description='Nodi di percezione per SANCHO: camera e rilevazione della traccia fluorescente',
     license='Apache-2.0',
     extras_require={
         'test': [
@@ -24,6 +24,7 @@ setup(
     },
     entry_points={
         'console_scripts': [
+            'camera_node = sancho_perception.camera_node:main',
         ],
     },
 )

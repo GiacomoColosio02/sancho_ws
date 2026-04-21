@@ -1,3 +1,5 @@
+import os
+from glob import glob
 from setuptools import find_packages, setup
 
 package_name = 'sancho_bringup'
@@ -10,12 +12,16 @@ setup(
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
+        (os.path.join('share', package_name, 'launch'),
+            glob('launch/*.py')),
+        (os.path.join('share', package_name, 'config'),
+            glob('config/*.yaml')),
     ],
     install_requires=['setuptools'],
     zip_safe=True,
     maintainer='giacomo',
     maintainer_email='colosio.giacomo.2002@gmail.com',
-    description='TODO: Package description',
+    description='Launch files e configurazione per avviare l intero stack SANCHO',
     license='Apache-2.0',
     extras_require={
         'test': [

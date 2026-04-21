@@ -1,0 +1,11 @@
+camera_node:
+  ros__parameters:
+    camera_index: 0
+    frame_width: 640
+    frame_height: 480
+    publish_rate_hz: 30.0
+    hsv_lower: [20, 100, 100]
+    hsv_upper: [35, 255, 255]
+    roi_height_percent: 0.3
+    min_contour_area: 500
+    show_debug: true
